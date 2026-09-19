@@ -10,6 +10,8 @@ A proposta é permitir que o usuário descreva um problema, envie um trecho de c
 
 O projeto possui uma interface inspirada em ambientes modernos de desenvolvimento, com foco em simplicidade, organização e facilidade de uso.
 
+O CodeFix AI utiliza **HTML, CSS e JavaScript** para construir e controlar a aplicação, enquanto a comunicação com a inteligência artificial é realizada através da **API do Azure OpenAI**.
+
 ---
 
 ## ✨ Funcionalidades
@@ -28,11 +30,11 @@ O projeto possui uma interface inspirada em ambientes modernos de desenvolviment
 
 ## 🛠️ Tecnologias utilizadas
 
-- **HTML5** — estrutura da aplicação
-- **CSS3** — estilização e layout
-- **JavaScript** — lógica da aplicação e integração com a API
-- **Azure OpenAI** — modelo de inteligência artificial utilizado pelo projeto
-- **LocalStorage** — armazenamento local das configurações da API
+- **HTML5** — responsável pela estrutura dos elementos da aplicação
+- **CSS3** — responsável pela aparência, layout, temas e organização visual
+- **JavaScript** — responsável pela lógica da aplicação, interação com a interface e comunicação com a API
+- **Azure OpenAI** — serviço utilizado para realizar a comunicação com modelos de inteligência artificial
+- **LocalStorage** — utilizado para armazenar localmente as configurações fornecidas pelo usuário
 
 O projeto foi desenvolvido utilizando **JavaScript puro**, sem frameworks ou bibliotecas externas obrigatórias.
 
@@ -40,7 +42,7 @@ O projeto foi desenvolvido utilizando **JavaScript puro**, sem frameworks ou bib
 
 ## 🧠 Como funciona
 
-O CodeFix AI utiliza uma requisição HTTP para se comunicar com a API do Azure OpenAI.
+O CodeFix AI funciona como uma aplicação frontend que utiliza JavaScript para conectar a interface do usuário à API do Azure OpenAI.
 
 O fluxo básico da aplicação é:
 
@@ -51,8 +53,12 @@ Interface do CodeFix AI
    ↓
 JavaScript
    ↓
-Azure OpenAI API
+API do Azure OpenAI
+   ↓
+Modelo de IA
    ↓
 Resposta da IA
+   ↓
+JavaScript
    ↓
 Interface do CodeFix AI
