@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFix AI</title>
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- CONTAINER GERAL DA APLICAÇÃO -->
+
+    <div class="app">
+     <!-- ===============================
+             SIDEBAR
+        =============================== -->
+
+
+<aside class="sidebar">
+
+        <div class="logo-container">
+
+        <div class="logo-icon">
+            &gt;_
+        </div>
+
+        <div class="logo-text">
+
+            <h1>CodeFix AI</h1>
+
+            <p>Developer Workspace</p>
+
+        </div>
+
+    </div>
+
+
+    <button class="new-chat" id="newChatButton">
+
+        ＋ &nbsp; New Chat
+
+    </button>
+
+
+    <div class="menu-item">
+
+        <span class="menu-icon">
+            ▤
+        </span>
+
+        <span>
+            Chats
+        </span>
+
+    </div>
+
+
+    <div id="chatList"></div>
+
+
+<div class="sidebar-footer">
+
+    <button class="theme-button" id="lightTheme">
+        ☀ Light
+    </button>
+
+    <button class="theme-button" id="darkTheme">
+        ☾ Dark
+    </button>
+    <button class="theme-button" id="configButton">
+    ⚙ Config
+    </button>
+</div>
+
+</aside>
+
+
+<main class="main">
+  <button class="menu-button" id="menuButton">
+        ☰
+    </button>
+
+    <section class="content">
+
+    
+
+        <div id="welcome">
+
+            <h2 class="title">
+                O que você quer corrigir hoje?
+            </h2>
+
+            <p class="subtitle">
+                Envie seu código, descreva o problema e deixe a IA encontrar a melhor solução.
+            </p>
+
+        </div>
+
+
+        <div id="conversation"></div>
+
+
+        <div class="input-area">
+
+            <textarea
+                id="messageInput"
+                placeholder="Descreva o problema ou cole seu código aqui..."
+            ></textarea>
+
+
+            <button
+                class="send-button"
+                id="sendButton"
+            >
+                ➤
+            </button>
+
+
+            <p class="warning">
+                CodeFix AI may produce inaccurate information about coding subjects.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+</div>
+<div class="config-panel" id="configPanel">
+
+    <div class="config-box">
+
+        <button class="config-close" id="configClose">
+            ×
+        </button>
+
+        <h2>Configuração da IA</h2>
+
+        <p class="config-description">
+            Configure as credenciais utilizadas pelo CodeFix AI.
+        </p>
+
+        <label for="apiKeyInput">
+            API Key
+        </label>
+
+        <input
+            type="password"
+            id="apiKeyInput"
+            placeholder="Cole sua API Key"
+        >
+
+        <label for="endpointInput">
+            Endpoint
+        </label>
+
+        <input
+            type="text"
+            id="endpointInput"
+            placeholder="Cole seu Endpoint"
+        >
+
+        <label for="deploymentInput">
+            Deployment
+        </label>
+
+        <input
+            type="text"
+            id="deploymentInput"
+            placeholder="Nome do seu Deployment"
+        >
+
+        <button id="saveConfigButton">
+            Salvar configuração
+        </button>
+
+        <p class="config-status" id="configStatus"></p>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
