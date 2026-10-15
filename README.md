@@ -12,6 +12,14 @@ O projeto possui uma interface inspirada em ambientes modernos de desenvolviment
 
 O CodeFix AI utiliza **HTML, CSS e JavaScript** para construir e controlar a aplicação, enquanto a comunicação com a inteligência artificial é realizada através da **API do Azure OpenAI**.
 
+## Configuração e status da IA
+
+O CodeFix AI foi desenvolvido para integrar-se ao Azure OpenAI. Para utilizar a IA, é necessário informar uma chave de API válida, o endpoint do recurso e o nome do deployment, com cota disponível.
+
+O processamento e a exibição de uma resposta foram testados com dados simulados. A integração real com o Azure permanece pendente de validação por indisponibilidade das credenciais.
+
+Nunca publique chaves de API no repositório.
+
 ---
 
 ## ✨ Funcionalidades
