@@ -1523,7 +1523,7 @@ body.dark-theme .diff-add {
 #welcome {
     position: relative;
     width: min(90%, 850px);
-    padding: 24px 40px;
+    padding: 40px 40px;
     border: 1px solid #e1e4f0;
     border-radius: 24px;
     background: linear-gradient(
