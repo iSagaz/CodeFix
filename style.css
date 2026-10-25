@@ -1836,3 +1836,299 @@ body.dark-theme .menu-button:hover {
     font-size: 13px;
     text-align: center;
 }
+
+/* CARD DE BOAS-VINDAS */
+
+#welcome {
+    position: relative;
+    isolation: isolate;
+    flex-shrink: 0;
+
+    width: min(90%, 760px);
+    padding: 36px 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    text-align: center;
+
+    border: 1px solid #e2dfff;
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(99, 91, 255, 0.12),
+            transparent 65%
+        ),
+        linear-gradient(145deg, #ffffff, #f4f3ff);
+
+    box-shadow:
+        0 16px 40px rgba(70, 60, 140, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+    overflow: hidden;
+}
+
+/* Detalhe luminoso no topo */
+
+#welcome::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 20%;
+    right: 20%;
+
+    width: auto;
+    height: 2px;
+
+    border-radius: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #8c83ff,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+/* Grade decorativa discreta */
+
+#welcome::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    width: auto;
+    height: auto;
+    border-radius: 0;
+
+    background:
+        linear-gradient(
+            rgba(99, 91, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(99, 91, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 28px 28px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#welcome .title {
+    margin: 0;
+    max-width: 620px;
+
+    font-size: clamp(25px, 3vw, 38px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+
+    color: #25213f;
+    text-wrap: balance;
+}
+
+#welcome .subtitle {
+    margin: 0;
+    max-width: 500px;
+
+    font-size: 14px;
+    line-height: 1.75;
+    color: #66637e;
+    text-wrap: pretty;
+}
+
+/* Aproxima o card e a caixa apenas na tela inicial */
+
+.content:has(#welcome:not([style*="none"])) {
+    justify-content: center;
+    gap: 24px;
+}
+
+#conversation:empty {
+    display: none;
+}
+
+/* CAIXA DE PERGUNTA */
+
+.input-area {
+    background: transparent;
+    border-radius: 18px;
+}
+
+.input-area #messageInput {
+    display: block;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 150px;
+    padding: 22px 76px 22px 22px;
+
+    border: 1px solid #ddd9f0;
+    border-radius: 18px;
+
+    background: #ffffff;
+    color: #29253e;
+
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.7;
+
+    box-shadow: 0 10px 30px rgba(70, 60, 140, 0.05);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.input-area #messageInput::placeholder {
+    color: #8b879f;
+}
+
+.input-area #messageInput:focus {
+    outline: none;
+    border-color: #8177ff;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 91, 255, 0.08),
+        0 12px 32px rgba(70, 60, 140, 0.08);
+}
+
+/* Posiciona o botão dentro da caixa,
+   sem depender da altura do aviso abaixo */
+
+.input-area .send-button {
+    top: 94px;
+    right: 14px;
+    bottom: auto;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #8275ff, #5c4aeb);
+    color: #ffffff;
+
+    font-size: 20px;
+
+    box-shadow: 0 5px 14px rgba(99, 91, 255, 0.22);
+}
+
+.input-area .send-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 91, 255, 0.3);
+}
+
+.input-area .send-button:active {
+    transform: scale(0.95);
+}
+
+.input-area .send-button:focus-visible {
+    outline: 3px solid #a69fff;
+    outline-offset: 3px;
+}
+
+.input-area .warning {
+    margin-top: 12px;
+    padding: 0 8px;
+
+    color: #817b98;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/* Mantém o botão alinhado durante a conversa */
+
+.main.chat-active .input-area .send-button {
+    top: calc(clamp(85px, 12vh, 140px) - 56px);
+}
+
+/* TEMA ESCURO */
+
+body.dark-theme #welcome {
+    border-color: #38334f;
+
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(132, 109, 255, 0.15),
+            transparent 65%
+        ),
+        linear-gradient(145deg, #242130, #1c1b25);
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+body.dark-theme #welcome .title {
+    color: #f2efff;
+}
+
+body.dark-theme #welcome .subtitle {
+    color: #b2abc8;
+}
+
+body.dark-theme .input-area #messageInput {
+    background: #22212d;
+    border-color: #3b354e;
+    color: #f2efff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+body.dark-theme .input-area #messageInput::placeholder {
+    color: #a19ab4;
+}
+
+body.dark-theme .input-area #messageInput:focus {
+    border-color: #9486ff;
+    box-shadow: 0 0 0 4px rgba(148, 134, 255, 0.1);
+}
+
+body.dark-theme .input-area .warning {
+    color: #a19ab4;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    #welcome {
+        width: 90%;
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    #welcome .title {
+        font-size: clamp(24px, 6vw, 30px);
+        letter-spacing: -0.7px;
+    }
+
+    #welcome .subtitle {
+        font-size: 13px;
+    }
+
+    .content:has(#welcome:not([style*="none"])) {
+        gap: 20px;
+    }
+
+    .input-area #messageInput {
+        font-size: 16px;
+        padding-left: 18px;
+    }
+
+    .main.chat-active .input-area .send-button {
+        top: 44px;
+    }
+}
