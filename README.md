@@ -1,4 +1,4 @@
-=# 🐛 CodeFix AI
+# 🐛 CodeFix AI
 
 ### Assistente de programação com Inteligência Artificial
 
