@@ -1,4 +1,4 @@
-# 🐛 CodeFix AI
+=# 🐛 CodeFix AI
 
 ### Assistente de programação com Inteligência Artificial
 
@@ -121,4 +121,45 @@ cd CodeFix
 
 ### 3. Abra a aplicação
 
-Abra o arquivo `index.html` diretamente no navegador ou utilize a
+Abra o arquivo `index.html` diretamente no navegador ou utilize a extensão Live Server no Visual Studio Code.
+
+### 4. Configure a integração com IA
+
+Configure as credenciais necessárias para a integração com Azure OpenAI, conforme as opções disponibilizadas pela aplicação.
+
+**Atenção:** não compartilhe chaves de API publicamente. Credenciais utilizadas diretamente no navegador podem ser acessadas por quem utiliza a aplicação. Para uma implantação pública, o ideal é intermediar as requisições por um servidor Back-End.
+
+## 📚 Aprendizados e conhecimentos aplicados
+
+O desenvolvimento do CodeFix AI envolve conceitos importantes para aplicações que utilizam inteligência artificial:
+
+- Desenvolvimento de interfaces com HTML e CSS.
+- Manipulação do DOM com JavaScript.
+- Consumo de APIs externas.
+- Requisições HTTP.
+- Manipulação de dados JSON.
+- Armazenamento local com LocalStorage.
+- Gerenciamento de eventos e interações.
+- Integração com serviços de inteligência artificial.
+- Organização de aplicações sem frameworks.
+
+## 🔮 Possíveis melhorias futuras
+
+- Implementação de um Back-End para intermediar as requisições.
+- Histórico persistente de conversas.
+- Suporte para diferentes linguagens de programação.
+- Formatação e destaque de sintaxe dos códigos.
+- Funcionalidade para copiar códigos gerados.
+- Melhorias na análise e explicação de erros.
+
+## 📌 Sobre o projeto
+
+O CodeFix AI representa uma aplicação prática da integração entre desenvolvimento web e inteligência artificial.
+
+Seu desenvolvimento permitiu explorar o consumo de APIs de IA, a manipulação dinâmica de interfaces e a criação de uma ferramenta voltada ao auxílio na programação.
+
+---
+
+**Desenvolvido por Enzo Sagaz**
+
+[GitHub](https://github.com/iSagaz)
