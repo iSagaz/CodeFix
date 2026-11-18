@@ -1,72 +1,124 @@
-# CodeFix AI
+# 🐛 CodeFix AI
 
-> Um assistente de IA para desenvolvedores que ajuda a analisar, explicar e corrigir problemas em código.
+### Assistente de programação com Inteligência Artificial
 
-## 📌 Sobre o projeto
+O **CodeFix AI** é uma aplicação web que utiliza inteligência artificial para auxiliar desenvolvedores durante o processo de programação.
 
-O **CodeFix AI** é um projeto desenvolvido para criar uma experiência de assistência à programação utilizando **Inteligência Artificial**.
+A ferramenta funciona como um chatbot especializado em programação, permitindo enviar trechos de código, descrever problemas e realizar perguntas técnicas, recebendo explicações e sugestões de possíveis soluções diretamente na interface.
 
-A proposta é permitir que o usuário descreva um problema, envie um trecho de código ou faça uma pergunta relacionada à programação, e receba uma resposta da IA diretamente na interface do aplicativo.
+Desenvolvido com JavaScript puro e integrado ao Azure OpenAI, o projeto busca oferecer uma experiência simples, intuitiva e acessível para auxiliar no desenvolvimento de software.
 
-O projeto possui uma interface inspirada em ambientes modernos de desenvolvimento, com foco em simplicidade, organização e facilidade de uso.
+## 🎯 Objetivo do projeto
 
-O CodeFix AI utiliza **HTML, CSS e JavaScript** para construir e controlar a aplicação, enquanto a comunicação com a inteligência artificial é realizada através da **API do Azure OpenAI**.
+Desenvolver um assistente de programação baseado em inteligência artificial, explorando a integração entre aplicações web e modelos de linguagem.
 
-## Configuração e status da IA
-
-O CodeFix AI foi desenvolvido para integrar-se ao Azure OpenAI. Para utilizar a IA, é necessário informar uma chave de API válida, o endpoint do recurso e o nome do deployment, com cota disponível.
-
-O processamento e a exibição de uma resposta foram testados com dados simulados. A integração real com o Azure permanece pendente de validação por indisponibilidade das credenciais.
-
-Nunca publique chaves de API no repositório.
-
----
+O projeto também tem como objetivo aplicar conhecimentos de desenvolvimento Front-End, consumo de APIs, armazenamento local e manipulação dinâmica de interfaces.
 
 ## ✨ Funcionalidades
 
-- 💬 Interface de chat para interação com a IA
-- 🤖 Integração com Azure OpenAI
-- 🐛 Análise e explicação de problemas em código
-- 💡 Sugestões de possíveis soluções
-- 📋 Suporte para envio de código diretamente pelo chat
-- 🌓 Tema claro e escuro
-- 💾 Histórico de conversas na interface
-- ⚙️ Configuração das credenciais da API através do navegador
-- 📱 Interface adaptável para diferentes tamanhos de tela
-
----
+- **Chat com IA:** interação direta com o assistente de programação.
+- **Análise de código:** envio de trechos de código para análise.
+- **Explicação de problemas:** auxílio na compreensão de erros e dificuldades de programação.
+- **Sugestões de soluções:** recomendações para resolver problemas identificados.
+- **Histórico de conversas:** armazenamento das mensagens na interface.
+- **Tema claro e escuro:** alternância entre diferentes temas visuais.
+- **Configuração da API:** gerenciamento das credenciais utilizadas pela aplicação.
+- **Interface responsiva:** adaptação para diferentes tamanhos de tela.
 
 ## 🛠️ Tecnologias utilizadas
 
-- **HTML5** — responsável pela estrutura dos elementos da aplicação
-- **CSS3** — responsável pela aparência, layout, temas e organização visual
-- **JavaScript** — responsável pela lógica da aplicação, interação com a interface e comunicação com a API
-- **Azure OpenAI** — serviço utilizado para realizar a comunicação com modelos de inteligência artificial
-- **LocalStorage** — utilizado para armazenar localmente as configurações fornecidas pelo usuário
+| Tecnologia | Aplicação |
+|---|---|
+| HTML5 | Estrutura da aplicação |
+| CSS3 | Estilização e identidade visual |
+| JavaScript | Lógica, interatividade e comunicação com a API |
+| Azure OpenAI | Integração com inteligência artificial |
+| LocalStorage | Armazenamento local de configurações |
+| Git e GitHub | Versionamento e gerenciamento do projeto |
 
-O projeto foi desenvolvido utilizando **JavaScript puro**, sem frameworks ou bibliotecas externas obrigatórias.
+O projeto utiliza JavaScript puro, sem depender de frameworks Front-End.
 
----
+## 🧠 Arquitetura e funcionamento
 
-## 🧠 Como funciona
+O CodeFix AI utiliza uma arquitetura baseada em uma interface web que se comunica diretamente com o serviço Azure OpenAI por meio de requisições HTTP.
 
-O CodeFix AI funciona como uma aplicação frontend que utiliza JavaScript para conectar a interface do usuário à API do Azure OpenAI.
+### Fluxo de funcionamento
 
-O fluxo básico da aplicação é:
+1. **Entrada do usuário:** o usuário envia uma pergunta, descreve um problema ou compartilha um trecho de código.
+2. **Processamento no Front-End:** o JavaScript captura a mensagem e organiza os dados necessários para a requisição.
+3. **Comunicação com a API:** a aplicação envia a solicitação ao Azure OpenAI.
+4. **Processamento pela IA:** o modelo recebe o contexto e produz uma resposta.
+5. **Retorno:** a resposta é recebida pela aplicação.
+6. **Exibição:** o JavaScript atualiza a interface com a resposta gerada.
+
+### Representação do fluxo
 
 ```text
-Usuário
-   ↓
-Interface do CodeFix AI
-   ↓
-JavaScript
-   ↓
-API do Azure OpenAI
-   ↓
-Modelo de IA
-   ↓
-Resposta da IA
-   ↓
-JavaScript
-   ↓
-Interface do CodeFix AI
+       USUÁRIO
+          |
+          v
+    INTERFACE WEB
+       HTML/CSS
+          |
+          v
+      JAVASCRIPT
+          |
+          v
+    AZURE OPENAI API
+          |
+          v
+   PROCESSAMENTO COM IA
+          |
+          v
+      RESPOSTA
+          |
+          v
+    INTERFACE DO CHAT
+```
+
+## 💾 Armazenamento local
+
+A aplicação utiliza o `LocalStorage` do navegador para armazenar configurações localmente.
+
+Isso permite manter determinadas informações entre sessões, sem depender de um banco de dados externo.
+
+## 📂 Estrutura do projeto
+
+```text
+CodeFix/
+│
+├── index.html
+├── style.css
+├── script.js
+├── exemplo.env
+├── .gitignore
+└── README.md
+```
+
+### Responsabilidade dos arquivos
+
+| Arquivo | Responsabilidade |
+|---|---|
+| `index.html` | Estrutura da interface do chatbot |
+| `style.css` | Estilização e organização visual |
+| `script.js` | Lógica do chatbot e integração com a API |
+| `exemplo.env` | Exemplo de configuração de variáveis |
+| `.gitignore` | Arquivos e diretórios ignorados pelo Git |
+
+## 🚀 Executando o projeto
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/iSagaz/CodeFix.git
+```
+
+### 2. Acesse a pasta
+
+```bash
+cd CodeFix
+```
+
+### 3. Abra a aplicação
+
+Abra o arquivo `index.html` diretamente no navegador ou utilize a
